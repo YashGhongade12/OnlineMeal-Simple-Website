@@ -1,0 +1,89 @@
+/*Just for chaecking purpose is working or not i have add a bgcolor to body ok it will start working value<1100px kala ka bhau*/
+/* body {
+    background-color: red;
+} */
+
+/*Navigation*/
+#navbar {
+    /*This point is added by me height: 120px; ok*/
+    height: 120px;
+    /*On decreasing the size of a responsive website logo and ul present in navbar it will come in a column and logo at center horizontally kala ka bhau*/
+    flex-direction: column;
+}
+
+#navbar ul li a {
+    font-size: 1rem;
+    padding: 0px 10px;
+    padding-bottom: 8px;
+}
+
+/*Home Section*/
+#home {
+    /* height: 743px; */
+    /*harry size*/
+    height: 437px;
+
+    /*I have make the padding less bcoz phone madhe padding kamich aste bhau jasta naste kala ka bhau..tasa pan phone madhe already space kami aste ane tayt padding dela tr ajun te ghan desnar bhau kala ka bhau*/
+    padding: 3px 28px;
+}
+
+#home::before {
+    /* height: 750px; */
+    /*harry size*/
+    height: 480px;
+}
+
+#home p {
+    font-size: 13px;
+}
+
+/*Services Section*/
+#services {
+    /* All Three Services boxes will come in a column and we have already make it a flex box in style.css in services kala ka bhau*/
+    flex-direction: column;
+}
+
+#services .box{
+    padding: 14px;
+    margin: 2px 0px;
+    margin-bottom: 20px;
+}
+
+/*Clients Section*/
+
+#clients {
+    /*Scroll bar will come after hidden we can scroll and see the hidden part*/
+    /* overflow: auto; */
+
+    /*On decreasing a size of a responsive website clients section overflow part will be hidden kala ka bhau*/
+    /* overflow: hidden; */
+
+    flex-wrap: wrap;
+}
+
+#clients img {
+    /*Remove the manually added height in client-section in style.css then it will wrap neatly realtive style.css madhe jaun bhau img che height la comment kar bhau mng responsive che width decrease kelay var image che quality kharab honar nahi bhau kala ka bhau instead of doing this give a height as a auto jar tasa nahi kela tr desktop la img che size mothe desnar ane bhyer zoom honar infront of us kala ka bhau*/
+    width: 66px;
+    padding:  2px 6px;
+    height: auto;
+}
+
+/*Contact Us Section*/
+
+/*form element inside a id=contact-box*/
+#contact-box form {
+    width: 80%;
+}
+
+/*Footer Section*/
+
+/*Utility Classes*/
+
+.h-primary {
+    font-size: 26px;
+}
+
+.btn {
+    font-size: 13px;
+    padding: 4px 8px;
+}

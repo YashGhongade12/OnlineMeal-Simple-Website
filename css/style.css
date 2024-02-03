@@ -1,0 +1,327 @@
+/* CSS Reset */
+/* for now only this much only comes in my mind later on we can add according to our requirements kala ka bhau */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* CSS Variables (Optional and Recomended If you are doing a first website skip it if u become pro use it ok for max width padding margin bgcolor etc..) For now i will not use ok */
+/* Just for example purpose kala ka bhau */
+:root {
+    --navbar-height: 59px;
+}
+
+
+                            /* Navigation Bar */
+
+#navbar {
+    /*Street row madhe yenr perfect madhe containing a logo as well as navbar kala ka bhau comment and comment out karun tu bagu shaktus bhau kala ka bhau*/
+    /* position: relative; */
+
+    position: sticky;
+
+    top: 0px;
+
+    /*U can change the height according to u choices kala ka bhau*/
+    height: 69px;
+
+    /*div having id=logo and ul tags comes in a street row*/
+    display: flex;
+
+    /*In a row comes in a center vertically kala ka bhau u can see by commenting and non-commenting also kala ka bhau*/
+    align-items: center;
+
+    /*Comes horizontally at center div having id logo and ul tag for revision purpose kala ka bhau*/
+    /* justify-content: center; */
+    }
+
+/*Pseudo Selector*/
+#navbar::before {
+    content: "";
+    background-color: black;
+    /*position: absolute; it is taken out of the normal flow of the document, meaning it does not affect the positioning of other elements.*/
+    position: absolute;
+    /*bcoz of top and left it goes backside of navbar also kala ka bhau so top and left ios vimp*/
+    top: 0;
+    left: 0;
+    height: 100%; /*100% for navbar id faktha not of whole page vh kala ka bhau same for width also kala ka bhau*/
+    width: 100%;
+    /*Background color black goes in backside*/
+    z-index: -1;
+    /*The opacity property in CSS is used to adjust the transparency of an element. It takes a value between 0 and 1, where 0 represents complete transparency (invisible), and 1 represents full opacity (completely visible)*/
+    opacity: 0.4;
+}
+
+
+                            /*Navigation Bar: Logo and Image*/
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 60px;
+    margin: 3px 6px;
+}
+
+                              /*Navigation Bar: List Styling */
+
+
+/*For more specific i have done a ul tag inside a navbar id kala ka bhau*/
+#navbar ul {
+    /*All list items li will come in a single street row kala ka bhau without no gap comes little bit overlap on it kala ka bhau*/
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+/*All list li items present in ul and where as more specific ul present inside a id=navbar*/
+#navbar ul li {
+    /*disc of all li will gone*/
+    list-style: none;
+
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    /*All anchor tag elements color will become to a white kala ka bhau*/
+    color: white;
+
+    /*By default display is inline on setting a block all anchor tags comes in a block in single row kala ka bhau ane padding denaysathi me display la block kela bhau keep it in mind bro kala ka bhau*/
+    display: block;
+
+    /*padding will applicable for each and every anchor elements all kala ka bhau u can clear this concept by changing a range through inspect element kala ka bhau*/
+    padding: 3px 22px;
+
+    border-radius: 20px;
+
+    /*Underline of all anchor elements will gayeb kala ka bhau */
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    /*On hovering a each and every anchor elements color changes to a black and bgcolor to white kala ka bhau*/
+    color: black;
+    background-color: white;
+}
+
+                                            /* Home section */
+
+#home {
+    /* all content inside a home id comes in a street row h1,p,button..etc kala ka bhau */
+    display: flex;
+
+    /*h1,p,button comes in a column*/
+    flex-direction: column;
+
+    padding: 3px 200px;
+
+    justify-content: center;
+
+    /*vertically comes at center and problem of buttons also fades away kala ka bhau*/
+    align-items: center;
+
+    /*height of whole section kala ka bhau*/
+    height: 585px;
+    /* height: 590px; */
+    /* height: 642px; harry size*/
+}
+
+#home::before {
+    /*content jar dela nahi na bhau mng kahich work honar nahi bhau u can see by commenting it kala ka bhau*/
+    content: "";
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    position: absolute;
+    /*mala mahete nahi ki etha top ane left ka taklay te harry bhai ne*/
+    top: 0;
+    left: 0;
+    height: 671px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+/*h1 from id=home more specifically*/
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+/*p tag from id=home more specifically*/
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+                                        /* Services Section */
+
+#services{
+    margin: 34px;
+    /*Bcoz in services their will be coming a three boxes and they must be in a single row thats why i done a display as a flex kala ka bhau*/
+    display: flex;
+}
+
+/*class box in a id=services more specifically kala ka bhau*/
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 25px 15px;
+    border-radius: 28px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+    /*I added this property by my ideas kala ka bhau*/
+    transition: box-shadow 0.3s ease-in-out,transform 0.3s ease-in-out;
+}
+
+#services .box:hover {
+    box-shadow: 5px 5px 10px rgba(198, 18, 18, 0.5);
+    /* box-shadow: 5px 5px 10px greenyellow; */
+    transform: scale(1.1);
+}
+
+/*img tag inside a class box and class box inside a id=services more specifically kala ka bhau*/
+#services .box img{
+    height: 160px;
+    /*display block kelayvarch margin auto honar bhau kala ka bhau..Always keep it mind bro kala ka bhau*/
+    display: block;
+    margin: auto;
+}
+
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+}                                        
+
+                                        /* Client Section For Marketing Purpose */
+#client-section {
+    /* It will take a place as per he wants kala ka bhau */
+    position: relative;
+
+    /*wrapping madhe problem aley mule i have remove the height bcoz on wrapping it will adjust itself only kala ka bhau*/
+    /* height: 344px; */
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('../bg.jpg');
+    width: 100%;
+    height: 100%;
+    /* height: 54%; */
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#clients {
+    /*Mahnje kasa all logo images will come in a single street row kala ka bhau*/
+    display: flex;
+    /*Horizontally comes at a center*/
+    justify-content: center;
+    /*Vertically Comes at a center*/
+    align-items: center;
+}
+
+#clients img {
+    height: 124px;
+}
+
+.client-item {
+    /*34 is lucky number mahanje kasa 34 ne kaam sarkhacha houn jata bhau kala ka bhau*/
+    padding: 34px;
+}
+
+                                        /*Contact Section*/
+#contact {
+    /*It will take a area/space as per he wants kala ka bhau no unwanted space it will take kala ka bhau*/
+    position: relative;
+}
+
+/*Adding a background-image in a contact section as a before pseudo Selector kala ka bhau */
+#contact::before {
+    background: url('../contact.jpg') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+/* All input and textarea elements inside a id contact-form more specifically*/
+#contact-box input,#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    /*font-size of a placeholder text kala ka bhau*/
+    font-size: 1.1rem;
+}
+
+/*form element inside a contact-box id more specifically kala ka bhau*/
+#contact-box form {
+    width: 40%;
+}
+
+/* All label elements inside a id=contact-form */
+#contact-box label {
+    font-family: 'Bree Serif', serif;
+    font-size: 1.3rem;
+}
+
+                                         /*Footer Section*/
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+    /* height: 20px; */
+}                                         
+
+                                        /* Utility Classes */
+
+/* This class i will use throught */                                        
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.1rem;
+    padding: 12px;
+}
+
+.btn {
+    /*If u didnt get it take help of a inspect box-model kala ka bhau and by changing a values figure it out the padding and etc..*/
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    /*Color of text inside a button ok,that set.*/
+    color: white;
+
+    /*If u didnt get it take help of a inspect box-model kala ka bhau and by changing a values figure it out the margin and etc..*/
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    /*On hovering a button cursor changes to a pointer kala ka bhau try it on website and see it ok*/
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+
