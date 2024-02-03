@@ -28,7 +28,8 @@ html {
     top: 0px;
 
     /*U can change the height according to u choices kala ka bhau*/
-    height: 69px;
+    /* height: 69px; */
+    height: 75px;
 
     /*div having id=logo and ul tags comes in a street row*/
     display: flex;
