@@ -308,7 +308,7 @@ footer {
     /*If u didnt get it take help of a inspect box-model kala ka bhau and by changing a values figure it out the padding and etc..*/
     padding: 6px 20px;
     border: 2px solid white;
-    background-color: brown;
+    background-color: rgb(219, 38, 38);
     /*Color of text inside a button ok,that set.*/
     color: white;
 
@@ -318,6 +318,10 @@ footer {
     border-radius: 10px;
     /*On hovering a button cursor changes to a pointer kala ka bhau try it on website and see it ok*/
     cursor: pointer;
+}
+/*This is added by me*/
+.btn:hover {
+    background-color: brown;
 }
 
 .center {
